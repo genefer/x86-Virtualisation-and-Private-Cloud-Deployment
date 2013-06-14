@@ -1,0 +1,103 @@
+1. Create an instance using eycalyptus user console or through commands
+2. Now do the following
+
+[root@Jeni Jeni]# vi /etc/sysconfig/network
+NETWORKING=yes
+HOSTNAME=Jeni
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+-- INSERT --
+ 
+3. Type 'i' for insert to change the hostname and type 'Esc' & '!' key and 'wq' to exit
+
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.1.19.23 Jeni
+10.1.19.20 www.jeni.com
+
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+~                                                                           
+-- INSERT --
+
+4. Take the ip of the instance and register the hostname like above. [www.jeni.com]
+
+5. To install apache
+
+[root@Jeni Jeni]# yum list installed | grep httpd
+httpd.x86_64                2.2.15-26.el6.centos
+httpd-tools.x86_64          2.2.15-26.el6.centos
+
+6. Make changes in the apache file
+
+[root@Jeni Jeni]# vi /etc/httpd/conf/httpd.conf
+
+7. Go to the file below and find these phrases and make changes if necessary
+
+ServerAdmin root@jeni.com
+ServerName www.jeni.com:80
+
+8. Type and create html file
+
+[root@Jeni Jeni]# vi /var/www/html/index.html
+
+9. make changes
+
+[root@Jeni Jeni]# vi /etc/sysconfig/iptables
+
+10. restart the iptables
+
+[root@Jeni Jeni]# service iptables restart
+
+iptables: Flushing firewall rules:                         [  OK  ]
+iptables: Setting chains to policy ACCEPT: nat filter      [  OK  ]
+iptables: Unloading modules:                               [  OK  ]
+
+11. start the server
+[root@Jeni Jeni]# service httpd start
+Starting httpd: 
+
+12. [root@Jeni Jeni]# vi /etc/hosts
+
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.1.19.23 Jeni
+10.1.19.20 www.jeni.com
+
+13. open the ip in the browser
+
+
+
+
