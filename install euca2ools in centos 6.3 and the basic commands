@@ -1,0 +1,44 @@
+Download the credentials from admin@eucalyptus in Eucalyptus Web Admin
+Make a directory and unzip the credentials file to the directory. Type the following
+
+1.cd~
+2.mkdir ~/.euca
+3.cd ~/.euca
+4.unzip /home/Jeni/Downloads/euca2-admin-x509.zip
+
+or you can do with the direct commands
+
+1.euca_conf --get-credentials cred.zip(to get credential files).
+2.unzip cred.zip(to unzip the cred files).
+3.source eucarc(to get the source frm eucarc).
+4.euca-describe-availability-zones verbose(to see the availabilty of instances).
+5.ls(to list the file).
+6.move or download the tar files to the host( filezila)
+7.ls
+8.tar -zxvf euca-ubuntu-9.04-i386.tar.gz(to create tar file).
+9.cd euca-ubuntu-9.04-i386(to change the directory).
+10.mkdir image-ubunto(to create a ubunto directory).
+11.ls
+12.euca-bundle-image  -i ubuntu.9-04.x86.img -d image-ubunto/ -r x86_64(to bundle the image file)
+13.euca-upload-bundle -b ubuntubuck -m image-ubunto/ubuntu.9-04.x86.img.manifest.xml(to upload the image).
+14.euca-register  ubuntubuck/ubuntu.9-04.x86.img.manifest.xml(to register the image and to get the emi image).
+15.euca-describe-images(to see the emi name of the image).
+16.cd kvm-kernel/(to enter into kernel).
+17.ls
+18.euca-bundle-image -i initrd.img-2.6.28-11-server -d . -r x86_64 --ramdisk true(to bundle the ramdisk).
+19. euca-upload-bundle -b ubuntorambuck -m initrd.img-2.6.28-11-server.manifest.xml(to upload the ramdisk manifest file).
+20. euca-register ubuntorambuck/initrd.img-2.6.28-11-server.manifest.xml(to register the ramdisk image).
+21.euca-bundle-image -i vmlinuz-2.6.28-11-server -d . -r x86_64 --kernel true(to bundle the kernel).
+22.euca-upload-bundle -b ubuntokernelbuck -m vmlinuz-2.6.28-11-server.manifest.xml(to upload the kernel image).
+23.euca-register ubuntokernelbuck/vmlinuz-2.6.28-11-server.manifest.xml(to regieter the kernel image).
+24.ls
+25.euca-describe-keypairs(to check whether keypair s der r not).
+26.euca-add-keypair ubunto > ubunto.priv(to add keypairs).
+27.chmod 0600 ubunto.priv(to change mode).
+28.euca-run-instances emi-399C122E -k ubunto(to run the instance).
+29.ping 192.168.1.100(to see the instances).
+30. ssh -i ubunto.priv 192.168.1.100(to login).
+31.ssh -i ubunto.priv root@192.168.1.100(if the above command s not logging use dis command).
+32.clear
+
+
