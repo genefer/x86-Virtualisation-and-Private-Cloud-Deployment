@@ -1,0 +1,6 @@
+1. open the terminal and libvirtd daemon
+
+[root@nitt Jeni]# /etc/init.d/libvirtd start
+Starting libvirtd daemon:                                  [  OK  ]
+
+2. open the virtual machine manager and start working
