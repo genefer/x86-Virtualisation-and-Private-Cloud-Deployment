@@ -35,4 +35,25 @@ flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36
 
 Permit 'y' for downloading packages
 
-6. 
+6. Install bridge utils if not installed.
+
+[root@nitt Jeni]# yum install bridge-utils
+Loaded plugins: fastestmirror, refresh-packagekit
+Loading mirror speeds from cached hostfile
+ * base: mirror.nbrc.ac.in
+ * elrepo: elrepo.org
+ * epel: epel.mirror.net.in
+ * extras: mirror.nbrc.ac.in
+ * updates: mirror.nbrc.ac.in
+Setting up Install Process
+Package bridge-utils-1.2-10.el6.x86_64 already installed and latest version
+Nothing to do
+[root@nitt Jeni]# 
+
+7. Install virt-manager in desktop
+
+[root@nitt Jeni]# yum install virt-manager libvirt qemu-system-x86 openssh-askpass
+
+8. Go to applications -> system tools -> virtual machine manager 
+
+9. Install the other os and enjoyy !!!! :-)
