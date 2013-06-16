@@ -30,4 +30,21 @@ __________
 
 Eclipse
 ________
+1. Install Java
+
+[root@web Jeni]# yum install java
+
+2. Download Eclipse and create directory on desktop '/opt'
+
+[root@web Jeni]# cd /home/Jeni/Downloads/
+[root@web Downloads]# tar -xvzf eclipse-SDK-4.2.1-linux-gtk-x86_64.tar.gz -C /opt
+[root@web Downloads]# chmod -R +r /opt/eclipse
+[root@web Downloads]# touch /usr/bin/eclipse
+[root@web Downloads]# chmod 755 /usr/bin/eclipse
+[root@web Downloads]# vi /usr/bin/eclipse
+[root@web Downloads]# vi /usr/share/applications/eclipse.desktop
+[root@web Downloads]# eclipse
+
+3. Hurray !!
+
 
