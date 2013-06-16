@@ -15,3 +15,19 @@ _______
 [root@web en-US]# rpm -Uvh RPMS/*.rpm RPMS/desktop-integration/openoffice.org3.4
 
 4. Go to application->office ..
+
+VLC Player
+__________
+
+[root@web Jeni]# yum localinstall --nogpgcheck http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-7.noarch.rpm
+[root@web Jeni]# yum localinstall --nogpgcheck http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+
+[root@web Jeni]# yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/el/updates/6/i386/rpmfusion-free-release-6-1.noarch.rpm
+[root@web Jeni]# yum localinstall --nogpgcheck http://download1.rpmfusion.org/nonfree/el/updates/6/i386/rpmfusion-nonfree-release-6-1.noarch.rpm
+
+[root@web Jeni]# yum --enablerepo=remi-test info vlc
+[root@web Jeni]# yum --enablerepo=remi-test install vlc
+
+Eclipse
+________
+
