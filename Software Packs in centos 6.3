@@ -1,0 +1,14 @@
+Office:
+_______
+
+1. Download LibreOffice_4.0.2_Linux_x86-64_rpm.tar.gz from sourceforge.net
+
+2. type the following for the installation
+
+[root@web Jeni]# cd /home/Jeni/Downloads
+[root@web Downloads]# tar -xvf LibreOffice_4.0.2_Linux_x86-64_rpm.tar.gz -C /home/Jeni/tmp
+
+[root@web Downloads]# cd /home/Jeni/tmp/LibreOffice_4.0.2.2_Linux_x86-64_rpm/RPMS/
+[root@web RPMS]# yum localinstall *.rpm
+[root@web RPMS]# yum localinstall desktop-integration/libreoffice4.0-freedesktop-menus-4.0.2*.noarch.rpm
+
