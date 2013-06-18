@@ -1,0 +1,4 @@
+[root@nitt MCA]# cd /home/MCA/Documents
+[root@nitt Documents]# ls
+info.php
+[root@nitt Documents]# mv info.php /var/www/html
