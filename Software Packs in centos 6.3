@@ -12,6 +12,12 @@ _______
 
 [root@web Jeni]# cd /home/Jeni/temp/en-US
 [root@web en-US]# vi /etc/yum.conf
+## Edit file
+nano -w /etc/yum.conf
+ 
+## Add exclude row
+[main]
+exclude=openoffice.org-ure* libreoffice-ure*
 [root@web en-US]# rpm -Uvh RPMS/*.rpm RPMS/desktop-integration/openoffice.org3.4
 
 4. Go to application->office ..
